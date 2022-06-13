@@ -3,6 +3,7 @@ description: scan barcode and create barcode 's plugin interface from 'ai_barcod
 version: 3.0.1
 homepage: https://pdliuw.github.io/
 repository: https://github.com/pdliuw/ai_barcode
+publish_to: none
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
@@ -17,7 +18,10 @@ dependencies:
     sdk: flutter
   ai_barcode_platform_interface: ^3.0.1
   # flutter create QRCode
-  qr_flutter: ^4.0.0
+  # Remove this flutter override when qr_flutter releases 4.0.1+ to pub.dev
+  qr_flutter:
+    git:
+      url: https://github.com/theyakka/qr.flutter.git
   universal_html: ^2.0.8
 
 dev_dependencies:
